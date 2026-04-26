@@ -55,61 +55,6 @@ roary/
 │   └── app.js          # Router, toasts, notifications, live counter
 └── README.md
 ```
-
----
-
-## Running locally
-
-No build step required.
-
-**Option 1 — Direct open**
-```
-Just open index.html in any modern browser.
-```
-
-**Option 2 — Local server (recommended for full experience)**
-```bash
-# Python
-python -m http.server 3000
-
-# Node
-npx serve .
-
-# VS Code
-Install "Live Server" extension → right-click index.html → Open with Live Server
-```
-
----
-
-## Deploying to Vercel
-
-### Method 1 — Vercel CLI (fastest)
-```bash
-npm i -g vercel
-cd roary
-vercel
-```
-Follow the prompts — select "No framework", root directory `./`, output directory `./`. Vercel auto-detects a static site.
-
-### Method 2 — GitHub + Vercel dashboard
-1. Push the `roary/` folder to a GitHub repository
-2. Go to [vercel.com](https://vercel.com) → New Project → Import your repo
-3. Framework Preset: **Other**
-4. Root Directory: leave as `/` (or set to `roary/` if in a subfolder)
-5. Click **Deploy** — done in ~30 seconds
-
-### Method 3 — Drag and drop
-1. Go to [vercel.com/new](https://vercel.com/new)
-2. Drag the entire `roary/` folder into the browser
-3. Vercel deploys instantly — no account required for the first deploy
-
-### Netlify alternative
-```bash
-npm i -g netlify-cli
-cd roary
-netlify deploy --prod --dir .
-```
-
 ---
 
 ## Architecture (production vision)
@@ -135,13 +80,6 @@ Output channels:
 
 **Privacy:** All person detection runs on-device at the edge — no biometric data leaves the venue perimeter. GDPR and India DPDP Act compliant by architecture.
 
----
-
-## Submission context
-
-Built for **PromptWars Virtual — Physical Event Experience challenge**
-
-*Challenge brief:* Design a solution that improves the physical event experience for attendees at large-scale sporting venues, addressing crowd movement, waiting times, and real-time coordination.
 
 **Key outcomes:**
 - 67% reduction in peak gate wait times
@@ -152,4 +90,3 @@ Built for **PromptWars Virtual — Physical Event Experience challenge**
 
 ---
 
-Built by **Akash Sarangi** · GitHub: [@RoxenAS](https://github.com/RoxenAS)
