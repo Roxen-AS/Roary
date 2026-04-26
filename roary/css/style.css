@@ -43,13 +43,16 @@ body {
   color: var(--t1);
   font-family: var(--fb);
   font-size: 13px;
-  line-height: 1.5;
-  overflow: hidden;
-  height: 100vh;
+  line-height: 1.45;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* ─── Layout ─── */
-.app { display: flex; height: 100vh; overflow: hidden; }
+.app { display: flex; min-height: 100vh; overflow: hidden; }
 
 .sidebar {
   width: var(--sidebar-w);
@@ -75,7 +78,7 @@ body {
 }
 .logo-mark { flex-shrink: 0; }
 .logo-text { font-family: var(--fh); font-size: 18px; font-weight: 800; color: var(--grn); letter-spacing: -0.5px; line-height: 1; }
-.logo-sub { font-size: 9px; color: var(--t3); letter-spacing: 1px; margin-top: 2px; }
+.logo-sub { font-size: 9px; color: var(--t3); letter-spacing: 0.5px; margin-top: 2px; }
 
 .event-pill {
   margin: 10px 12px;
@@ -85,7 +88,7 @@ body {
   padding: 8px 10px;
   flex-shrink: 0;
 }
-.ep-live { display: flex; align-items: center; gap: 5px; font-size: 9px; color: var(--grn); font-family: var(--fh); font-weight: 700; letter-spacing: 1px; }
+.ep-live { display: flex; align-items: center; gap: 5px; font-size: 9px; color: var(--grn); font-family: var(--fh); font-weight: 700; letter-spacing: 0.5px; }
 .ep-name { font-size: 11px; font-weight: 500; margin-top: 3px; }
 .ep-meta { font-size: 10px; color: var(--t3); margin-top: 1px; }
 
@@ -95,7 +98,7 @@ body {
   color: var(--t3);
   font-family: var(--fh);
   font-weight: 700;
-  letter-spacing: 1.2px;
+  letter-spacing: 0.8px;
   text-transform: uppercase;
   flex-shrink: 0;
 }
@@ -238,7 +241,7 @@ body {
   display: flex; align-items: flex-start; justify-content: space-between;
   margin-bottom: 18px; gap: 12px; flex-wrap: wrap;
 }
-.ph-left h1 { font-family: var(--fh); font-size: 20px; font-weight: 800; letter-spacing: -.4px; }
+.ph-left h1 { font-family: var(--fh); font-size: 20px; font-weight: 800; letter-spacing: -0.2px; }
 .ph-left p { font-size: 11px; color: var(--t3); margin-top: 3px; }
 .ph-right { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
 
