@@ -236,6 +236,9 @@ body {
 .main {
   flex: 1; overflow-y: auto; background: var(--bg); padding: 20px;
   position: relative;
+  width: calc(100% - 40px);
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 /* ─── Page header ─── */
@@ -279,7 +282,7 @@ body {
   transition: var(--trans);
 }
 .metric:hover { border-color: var(--b2); }
-.metric-label { font-size: 10px; color: var(--t3); font-family: var(--fh); font-weight: 600; letter-spacing: .5px; text-transform: uppercase; }
+.metric-label { font-size: 10px; color: var(--t3); font-family: var(--fh); font-weight: 600; letter-spacing: .3px; text-transform: uppercase; }
 .metric-value { font-family: var(--fh); font-size: 26px; font-weight: 800; margin: 5px 0 3px; letter-spacing: -.5px; line-height: 1; font-variant-numeric: tabular-nums; }
 .metric-delta { font-size: 10px; display: flex; align-items: center; gap: 3px; color: var(--t3); }
 .delta-up { color: var(--grn); }
@@ -287,7 +290,7 @@ body {
 .delta-amb { color: var(--amb); }
 
 /* ─── Grid layouts ─── */
-.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+.grid2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px; margin-bottom: 12px; }
 .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-bottom: 12px; }
 .grid4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; margin-bottom: 12px; }
 @media(max-width:900px){ .grid2,.grid3,.grid4 { grid-template-columns: 1fr 1fr; } }
@@ -297,11 +300,13 @@ body {
   background: var(--s1); border: 1px solid var(--b1);
   border-radius: var(--r2); padding: 16px;
   transition: var(--trans);
+  min-width: 0;
+  max-width: 100%;
 }
 .card:hover { border-color: var(--b2); }
 .card-title {
   font-family: var(--fh); font-size: 10px; font-weight: 700;
-  color: var(--t2); letter-spacing: .5px; text-transform: uppercase;
+  color: var(--t2); letter-spacing: .3px; text-transform: uppercase;
   margin-bottom: 14px; display: flex; align-items: center; gap: 6px;
 }
 .card-title svg { opacity: .7; }
