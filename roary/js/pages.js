@@ -46,29 +46,29 @@ function renderDashboard() {
     </div>
   </div>
 
-  <div class="grid2 mb-12">
-    <div class="card" style="grid-column:1">
+  <div style="display:grid;grid-template-columns:3fr 2fr;gap:14px;margin-bottom:14px">
+    <div class="card">
       <div class="card-title">
         <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 10 Q2.5 5 4 7 Q5.5 9 6.5 4 Q7.5 0 8.5 6 Q9.5 9 10.5 7 Q11.5 5 12 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         Live crowd flow
       </div>
-      <div class="chart-wrap"><canvas id="chart-crowd-flow" height="200"></canvas></div>
+      <div style="position:relative;height:220px"><canvas id="chart-crowd-flow"></canvas></div>
     </div>
     <div class="card">
       <div class="card-title">Active incidents</div>
       ${d.alerts.filter(a=>a.status==='active').map(a => `
       <div class="alert-item" onclick="showPage('alerts',document.querySelector('[onclick*=alerts]'))">
         <div class="alert-dot" style="background:${a.severity==='high'?'var(--red)':'var(--amb)'}"></div>
-        <div>
+        <div style="flex:1;min-width:0">
           <div class="alert-body"><strong>${a.title}</strong></div>
           <div class="alert-meta"><span>${a.location}</span><span>${a.time}</span></div>
         </div>
-        <span class="badge ${a.severity==='high'?'b-red':'b-amb'}" style="margin-left:auto;align-self:flex-start">${a.severity}</span>
+        <span class="badge ${a.severity==='high'?'b-red':'b-amb'}" style="flex-shrink:0">${a.severity}</span>
       </div>`).join('')}
     </div>
   </div>
 
-  <div class="grid2">
+  <div style="display:grid;grid-template-columns:2fr 3fr;gap:14px;margin-bottom:14px">
     <div class="card">
       <div class="card-title">Zone congestion overview</div>
       ${d.zones.slice(0,6).map(z => {
@@ -86,8 +86,8 @@ function renderDashboard() {
     </div>
     <div class="card">
       <div class="card-title">Ingress trend · last 90 min</div>
-      <div class="chart-wrap"><canvas id="chart-ingress" height="140"></canvas></div>
-      <div style="display:flex;gap:10px;margin-top:12px">
+      <div style="position:relative;height:150px;margin-bottom:12px"><canvas id="chart-ingress"></canvas></div>
+      <div style="display:flex;gap:10px">
         <div class="mini-stat" style="flex:1">
           <div class="mini-stat-val text-amb">22:40</div>
           <div class="mini-stat-label">Exit wave start</div>
@@ -557,7 +557,7 @@ function renderAnalytics() {
     <div class="card">
       <div class="card-title">Venue ingress / egress flow</div>
       <div style="font-size:11px;color:var(--t3);margin-bottom:10px">Rate of attendees entering and exiting over time</div>
-      <div class="chart-wrap"><canvas id="chart-analytics-flow" height="220"></canvas></div>
+      <div style="position:relative;height:240px"><canvas id="chart-analytics-flow"></canvas></div>
     </div>
     <div class="card">
       <div class="card-title">Zone density distribution</div>
@@ -574,7 +574,7 @@ function renderAnalytics() {
   <div class="card">
     <div class="card-title">Facility wait times comparison</div>
     <div style="font-size:11px;color:var(--t3);margin-bottom:10px">Average wait times by facility (minutes)</div>
-    <div class="chart-wrap"><canvas id="chart-waittimes" height="200"></canvas></div>
+    <div style="position:relative;height:220px"><canvas id="chart-waittimes"></canvas></div>
   </div>
   <div class="card" style="margin-top:12px">
     <div class="card-title">Nightly model retraining pipeline</div>
