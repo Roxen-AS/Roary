@@ -6,7 +6,7 @@
 **Live link** - https://roary-one.vercel.app/
 
 
-Roary is an AI-powered smart venue operations platform built for the **PromptWars Physical Event Experience** challenge. It transforms large-scale sporting venues into intelligent, self-coordinating environments — eliminating crowd bottlenecks, cutting wait times, and giving 80,000 fans a seamless experience from entry to exit.
+Roary is an AI-powered smart venue operations platform. It transforms large-scale sporting venues into intelligent, self-coordinating environments — eliminating crowd bottlenecks, cutting wait times, and giving 80,000 fans a seamless experience from entry to exit.
 
 ---
 
